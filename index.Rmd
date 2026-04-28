@@ -1,0 +1,55 @@
+---
+title: "Cantidad de dispositivos móviles en América - Dayana Espinoza Montalvo"
+output: 
+  flexdashboard::flex_dashboard
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard) # always
+library(ggplot2)
+library(sf)      
+```
+
+<!-- links -->
+```{r}
+map1link = "https://github.com/despinozam733/evaluacion/raw/main/map1.rds"
+map2link = "https://github.com/despinozam733/evaluacion/raw/main/map2.rds"
+map3link = "https://github.com/despinozam733/evaluacion/raw/main/map3.rds"
+
+viz1=url(map1link)
+
+viz2=url(map2link)
+
+viz3=url(map3link)
+```
+
+## Sidebar {.sidebar}
+
+Evaluación individual - generación de mapas DOT DENSITY MAP, PROPORTIONAL SYMBOL MAP, CHOROPLETH MAP. 
+20200862 Dayana Alejandra Espinoza Montalvo. 
+2026.  
+
+## Column {.tabset .tabset-fade}
+
+
+### DOT DENSITY MAP
+
+```{r}
+readRDS(viz1)
+```
+
+
+### PROPORTIONAL SYMBOL MAP
+
+```{r}
+readRDS(viz2)
+```
+
+### CHOROPLETH MAP
+
+```{r}
+readRDS(viz3)
+```
+
+
+
